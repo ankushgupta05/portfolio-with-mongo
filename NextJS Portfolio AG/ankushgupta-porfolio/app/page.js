@@ -4,8 +4,8 @@ import me from '@/public/Personal_Images/me.jpg'
 
 import dynamic from 'next/dynamic';
 
-// import Typewriter from 'typewriter-effect';
 
+const urlpdf = '@/public/Documents/ankushgupta.pdf'
 
 import likedin from '@/public/SocialMedia_Icons/linkedin.png'
 import instagram from '@/public/SocialMedia_Icons/instagram.png'
@@ -16,6 +16,7 @@ import twitter from '@/public/SocialMedia_Icons/twitter.png'
 import development from '@/public/Document_Icons/development.png'
 import document from '@/public/Document_Icons/document.png'
 import project from '@/public/Document_Icons/project.png'
+import Link from 'next/link';
 
 
 
@@ -43,10 +44,10 @@ const page = () => {
             <span className="text-purple-400">Portfolio</span>
           </h1>
           <div className="space-x-4">
-            <a href="#" className="text-white">Home</a>
-            <a href="#" className="text-white">About</a>
-            <a href="#" className="text-white">Project</a>
-            <a href="#" className="text-white">Contact Us</a>
+            <Link href="#" className="text-white">Home</Link>
+            <Link href="#" className="text-white">About</Link>
+            <Link href="#" className="text-white">Project</Link>
+            <Link href="#" className="text-white">Contact Us</Link>
           </div>
         </div>
       </nav>  */}
@@ -59,9 +60,9 @@ const page = () => {
               <Image src={me} alt="Ankush Gupta" width={160} height={160} className="rounded-full mx-auto mb-4" />
               <div className='p-4' >
                 <h2 className="text-xl font-semibold">Name : Ankush Gupta</h2>
-                <p className="text-md">CSE - AI&DS</p>
-                <p className='mt-5 text-sm'>Sagar Institude Of Science & Technology  College</p>
-                <p className='text-sm'> Gandhi Nagar Bhopal [M.P]</p>
+                <p className="text-md font-bold">CSE - AI&DS</p>
+                <p className='mt-5 text-xs font-bold'>Sagar Institude Of Science & Technology  College</p>
+                <p className='text-xs font-bold'> Gandhi Nagar Bhopal [M.P]</p>
               </div>
             </div>
 
@@ -94,21 +95,22 @@ const page = () => {
                 <div className='text-center '>
 
                   <h2 className="text-3xl font-bold mb-4">Hi, My name is <span className="text-purple-400">Ankush</span></h2>
-                  <div className="mb-4 text-xl">And I am a passionate</div>
-                  <p className="text-purple-400 text-2xl font-semibold mb-4"><DynamicTypewriter /></p>
+                  <div className="mb-4 text-xl">And I am Passionate</div>
+                  <p className="text-purple-400 text-2xl font-semibold mb-4 h-8"><DynamicTypewriter /></p>
 
                 </div>
                 <div className='w-full md:flex md:flex-row md:justify-around'>
                   <div className="flex space-x-4  justify-around">
 
-                    <a href="#" className="text-2xl"><i className="fab fa-github"> <Image src={instagram} alt={'development'} width={40} height={40} className="mx-auto mb-2 bg-white rounded-lg " /> </i></a>
-                    <a href="#" className="text-2xl"><i className="fab fa-instagram"> <Image src={github} alt={'development'} width={40} height={40} className="mx-auto   bg-white rounded-lg mb-2" /> </i></a>
-                    <a href="#" className="text-2xl"><i className="fab fa-twitter"> <Image src={likedin} alt={'development'} width={40} height={40} className="mx-auto  bg-white rounded-lg  mb-2" /> </i></a>
-                    <a href="#" className="text-2xl"><i className="fab fa-linkedin"> <Image src={twitter} alt={'development'} width={40} height={40} className="mx-auto  bg-white rounded-lg  mb-2" /> </i></a>
+                    <a href="https://github.com/ankushgupta05" target='_blank' className="text-2xl"><i className="fab fa-github"> <Image src={instagram} alt={'development'} width={40} height={40} className="mx-auto mb-2 bg-white rounded-lg " /> </i></a>
+                    <a href="https://github.com/ankushgupta05" target='_blank' className="text-2xl"><i className="fab fa-instagram"> <Image src={github} alt={'development'} width={40} height={40} className="mx-auto   bg-white rounded-lg mb-2" /> </i></a>
+                    <a href="https://github.com/ankushgupta05" target='_blank' className="text-2xl"><i className="fab fa-twitter"> <Image src={likedin} alt={'development'} width={40} height={40} className="mx-auto  bg-white rounded-lg  mb-2" /> </i></a>
+                    <a href="https://github.com/ankushgupta05" target='_blank' className="text-2xl"><i className="fab fa-linkedin"> <Image src={twitter} alt={'development'} width={40} height={40} className="mx-auto  bg-white rounded-lg  mb-2" /> </i></a>
                   </div>
 
                   <div className='md:mt-0 mt-2'>
-                    <button className="bg-blue-500 text-white font-bold py-2 w-full md:w-36 rounded-lg ">Hire Me</button>
+                    {/* <a href="/public/Documents/ankushgupta.pdf" download='ankushgupta.pdf' target='_blank' rel='noopener noreferrer'>  <button className="bg-blue-500 text-white font-bold py-2 w-full md:w-36 rounded-lg ">Hire Me</button></a> */}
+                    <a href={urlpdf} download={urlpdf} target='_blank' rel='noopener noreferrer'>  <button className="bg-blue-500 text-white font-bold py-2 w-full md:w-36 rounded-lg ">Hire Me</button></a>
                   </div>
 
                 </div>

@@ -12,6 +12,13 @@ Ok to proceed? (y)
 Creating a new Next.js app in E:\All_programe_new_folder\Next JS-CWH   Singma Web Devlopment\Setup Web\first.
 
 
+1)
+```
+// start nextjs app command
+npm run dev
+```
+
+
 2)
 // create Docker file in ankushgupta-porfolio folder  and write command in Docker file
 
@@ -79,32 +86,24 @@ Docker build .
 
 
 ####  start type writter effect
+// typewritter taken from chatgpt
+
+
+
+
+#### replace  from <a></a> to  <Link></Link>  
 
 1)
 ```
-// google link of type writter website
-https://www.npmjs.com/package/typewriter-effect
+// import it in hadder
+import Link from 'next/link'
 ```
 
 
-2)
+
+#### set single page scroll in our next js project
+
+1)
 ```
-// hit this command 
-npm i typewriter-effect
-```
-
-
-3)
-```
-// template of typewriter
-
-import Typewriter from 'typewriter-effect';
-
-<Typewriter
-  options={{
-    strings: ['Hello', 'World'],
-    autoStart: true,
-    loop: true,
-  }}
-/>
+npm install react-scroll 
 ```
